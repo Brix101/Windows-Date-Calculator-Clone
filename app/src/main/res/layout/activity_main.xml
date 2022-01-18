@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:entries="@array/spinnerItems"
+        android:minHeight="32dp"
+        style="@style/SpinnerTextViewItem"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <LinearLayout
+        android:id="@+id/layoutDiff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <include layout="@layout/layout_difference" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_add_sub" />
+    </LinearLayout>
+
+
+</LinearLayout>

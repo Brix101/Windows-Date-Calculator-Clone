@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Windows Date Calculator Clone</string>
+
+    <string-array name="spinnerItems">
+        <item>Difference between dates</item>
+        <item>Add or subtract days</item>
+    </string-array>
+</resources>
