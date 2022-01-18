@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="From"
-            android:textSize="20sp"
-            android:layout_marginBottom="10dp"/>
+            style="@style/TextViewTitle"
+            android:text="From" />
+
         <TextView
             android:id="@+id/txtDiffFrom"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:onClick="onClickFromDiff"/>
+            android:onClick="onClickFromDiff" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="To"
-            android:textSize="20sp"
-            android:layout_marginBottom="10dp"/>
+            style="@style/TextViewTitle"
+            android:text="To" />
+
         <TextView
             android:id="@+id/txtDiffTo"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:onClick="onClickToDiff"/>
+            android:onClick="onClickToDiff" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -44,20 +43,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Difference"
-            android:textSize="20sp"/>
+            style="@style/TextViewTitle"
+            android:text="Difference" />
 
         <TextView
             android:id="@+id/txtDiffResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="Same Date"
-            />
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtDiffDay"
+            style="@style/TextViewTitle"/>
     </LinearLayout>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -10,11 +10,8 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="From"
-            android:textSize="20sp" />
+            style="@style/TextViewTitle"
+            android:text="From" />
 
         <TextView
             android:id="@+id/txtAddSubFrom"
@@ -24,27 +21,108 @@
     </LinearLayout>
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:orientation="horizontal"
+        android:checkedButton="@id/radioButtonAdd"
         android:gravity="center"
-        android:checkedButton="@id/radioButtonAdd">
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/radioButtonAdd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/RadioButtonName"
             android:text="Add"
-            android:textSize="22sp"/>
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/radioButtonSub"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/RadioButtonName"
             android:text="Subtract"
-            android:textSize="22sp"/>
+            android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Years"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                style="@style/EditTextDateSelector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Months"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                style="@style/EditTextDateSelector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Days"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerDay"
+                style="@style/EditTextDateSelector" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewTitle"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/txtAddSubResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuesday, 18 January 2022"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>
